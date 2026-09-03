@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+  --school-navy-950: #060d1d;
+  --school-navy-900: #0c1833;
+  --school-navy-800: #142852;
+  --school-navy-700: #1d3a75;
+  --school-gold: #f59e0b;
+  --school-gold-hover: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--school-navy-950);
+  color: #f1f5f9;
+}
+
+/* Custom Scrollbar for school portal */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060d1d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d3a75;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
