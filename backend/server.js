@@ -35,6 +35,10 @@ app.use('/api/parent', require('./src/routes/parentRoutes'));
 app.use('/api/library', require('./src/routes/libraryRoutes'));
 app.use('/api/ai-tutor', require('./src/routes/aiTutorRoutes'));
 
+app.get('/', (req, res) => {
+  res.json({ status: 'OK', message: 'School Management API is running', health: '/api/health' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'School Management API is running' });
 });
