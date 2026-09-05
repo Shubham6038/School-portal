@@ -5,15 +5,9 @@ const connectDB = require('./src/config/db');
 
 const app = express();
 
-// Dynamic CORS configuration to allow any Vercel preview/production URL and local testing
+// Allow browser requests from the deployed frontend and local development.
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (origin.endsWith('.vercel.app') || origin.startsWith('http://localhost:')) {
-      return callback(null, true);
-    }
-    callback(new Error('Not allowed by CORS'));
-  },
+  origin: true,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
