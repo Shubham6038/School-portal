@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiBaseUrl = import.meta.env.PROD
-  ? 'https://school-portal-2-bb5g.onrender.com/api'
+  ? '/api'
   : 'http://localhost:5000/api';
 
 const API = axios.create({

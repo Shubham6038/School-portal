@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://school-portal-2-bb5g.onrender.com/api/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
