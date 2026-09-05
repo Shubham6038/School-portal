@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://school-portal-1-sv2h.onrender.com/api/:path*"
+      "destination": "https://school-portal-2-bb5h.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
