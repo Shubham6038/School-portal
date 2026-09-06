@@ -1,4 +1,4 @@
-const backendApiUrl = (process.env.BACKEND_API_URL || 'https://school-portal-2-bb5g.onrender.com/api').replace(/\/$/, '');
+const backendApiUrl = (process.env.BACKEND_API_URL || 'https://school-portal-2-bh5g.onrender.com/api').replace(/\/$/, '');
 
 export default async function handler(req, res) {
   const path = Array.isArray(req.query.path) ? req.query.path.join('/') : req.query.path || '';
