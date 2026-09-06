@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const User = require('./backend/src/models/User');
-const Fee = require('./backend/src/models/Fee');
+const User = require('./src/models/User');
+const Fee = require('./src/models/Fee');
 
 const seedFee = async () => {
   try {

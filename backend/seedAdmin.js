@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const User = require('./backend/src/models/User');
+const User = require('./src/models/User');
 
 const seedAdmin = async () => {
   try {

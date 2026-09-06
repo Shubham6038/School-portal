@@ -1,8 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const { Book, BookIssue } = require('./backend/src/models/Library');
-const User = require('./backend/src/models/User');
+const { Book, BookIssue } = require('./src/models/Library');
+const User = require('./src/models/User');
 
 const seedLibrary = async () => {
   try {

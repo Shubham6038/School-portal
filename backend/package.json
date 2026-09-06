@@ -6,6 +6,10 @@
   "scripts": {
     "dev": "vite",
     "start": "node server.js",
+    "seed:admin": "node seedAdmin.js",
+    "seed:principal": "node seedBranchAdmin.js",
+    "seed:teacher": "node seedTeacher.js",
+    "seed:fee": "node seedFee.js",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
