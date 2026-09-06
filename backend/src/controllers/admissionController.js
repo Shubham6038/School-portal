@@ -44,9 +44,11 @@ exports.submitAdmission = async (req, res) => {
     const ifscCode = normalize(req.body.ifscCode) || normalize(req.body['refundAccountDetails[ifscCode]']) || '';
     const upiId = normalize(req.body.upiId) || normalize(req.body['refundAccountDetails[upiId]']) || '';
 
-    // Multer se aane wali files ke paths check karein (agar upload ho rahi hain)
-    const passportPhotoPath = req.files?.passportPhoto ? req.files.passportPhoto[0].path : (req.body.passportPhoto || '');
-    const aadharCardPath = req.files?.aadharCard ? req.files.aadharCard[0].path : (req.body.aadharCard || '');
+    const publicUploadUrl = (file) => file
+      ? `${req.protocol}://${req.get('host')}/uploads/${file.filename}`
+      : '';
+    const passportPhotoPath = publicUploadUrl(req.files?.passportPhoto?.[0]);
+    const aadharCardPath = publicUploadUrl(req.files?.aadharCard?.[0]);
 
     const student = await Student.create({
       fullName: req.body.fullName,

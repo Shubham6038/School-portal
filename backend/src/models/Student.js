@@ -11,6 +11,10 @@ const studentSchema = new mongoose.Schema({
   parentFullName: { type: String, required: true },
   parentPhone: { type: String, required: true },
   parentEmail: { type: String },
+  documents: {
+    passportPhoto: { type: String, default: '' },
+    aadharCard: { type: String, default: '' }
+  },
   
   // Registration Status & Rejection Info
   status: {
